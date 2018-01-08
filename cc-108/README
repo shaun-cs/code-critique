@@ -1,0 +1,15 @@
+Code Critique 108
+-----------------
+
+I've got a problem with an extra colon being produced in the output from a program.
+I've stripped down the files involved in the program a fair bit to this smaller example.
+Here is what the program produces:
+
+test_program Example "With space"
+1:: 1001:Example
+2:: "1002:With space"
+
+I can't see where the two colons after each initial number come from as I only ask for one.
+
+Please can you help the programmer find the cause of their problem and suggest some other possible
+things to consider about their program.

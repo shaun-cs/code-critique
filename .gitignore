@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# JetBrains
+.idea/
+CMakeLists.txt
