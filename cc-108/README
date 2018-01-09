@@ -24,3 +24,10 @@ instantiates a default empty string into the normally expected value parameter.
 Now, when Record::to_string() is called, the 'extra' colon is appended to the id, before the empty value.
 The std version of to_string() is never called for the supplied index of type int.
 
+Solution
+--------
+
+Remove the global declaration of namespace util from escaped.h, then the correct versions of to_string(t)
+are called according to the type of the argument.
+
+

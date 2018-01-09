@@ -8,8 +8,8 @@
 #pragma once
 #include <string>
 
-namespace util
-{
+//namespace util
+//{
     //provide escaped textual representation of value
     //- any double quotes need escaping with \
     //- wrap in double quotes if has any spaces
@@ -31,6 +31,6 @@ namespace util
         }
         return ret;
     }
-}
+//}
 
 #endif //CODE_CRITIQUE_ESCAPED_H
