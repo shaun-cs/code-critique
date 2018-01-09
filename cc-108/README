@@ -13,3 +13,14 @@ I can't see where the two colons after each initial number come from as I only a
 
 Please can you help the programmer find the cause of their problem and suggest some other possible
 things to consider about their program.
+
+The Problem
+-----------
+
+to_string(t), called in escaped_text(T t), always calls the inline override defined in record.h.
+Even when an index of type int is passed as the argument, it is promoted to an instance of type
+Record, calling the constructor, which accepts the index as a uint64_t for the id param, and
+instantiates a default empty string into the normally expected value parameter.
+Now, when Record::to_string() is called, the 'extra' colon is appended to the id, before the empty value.
+The std version of to_string() is never called for the supplied index of type int.
+
