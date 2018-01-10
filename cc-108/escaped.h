@@ -18,7 +18,7 @@ std::string escaped_text(T t)
 
     auto ret = to_string(t);
     for(std::size_t idx = 0;
-        (idx = ret.find('"',idx)) != std::string::npos;
+        (idx = ret.find('\"',idx)) != std::string::npos;
             idx += 2)
     {
         ret.insert(idx, "\\", 1);
