@@ -30,4 +30,37 @@ Solution
 Remove the global declaration of namespace util from escaped.h, then the correct versions of to_string(t)
 are called according to the type of the argument.
 
+For the second command-line argument, the double quotes need to be escaped if to be read into the string
+e.g. "\"With space\""
+Not sure whether this was intended or not, but there is a test for double quotes which is never executed:
+see line 21 in escaped_text()
+The output is now:
+2: "1002:"With space""
+
+So what is the point of the following?
+    for(std::size_t idx = 0;
+        (idx = ret.find(idx, '"')) != std::string::npos;
+            idx += 2)
+    {
+        ret.insert(idx, "\\", 1);
+    }
+Place two backslashes in front of the double quote?
+But now there are 2 issues:
+- the params supplied to find are in the wrong order; should be index last:
+    ret.find('"',idx))
+- to match double quote, it must be escaped:
+    '\"'
+Am assuming that placing two backslashes is deliberate, because the idx deliberately steps over two characters.
+So now the result is:
+    "1002:\\\"With space\\\""
+i.e. a backslash is escaped, followed by a double-quote being escaped
+And, finally, because the string has a space, the whole thing is wrapped in escaped double-quotes:
+    "\"1002:\\\"With space\\\"\""
+Who knows if that is correct?
+The output is now:
+1: 1001:Example
+2: "1002:\"With space\""
+
+
+
 
