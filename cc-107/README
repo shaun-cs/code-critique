@@ -1,0 +1,13 @@
+I want to collect the meals needed for attendees for a one-day event
+so I’m reading lines of text with the name and a list of the meals needed,
+and then writing the totals. However, the totals are wrong – but I can’t see why:
+
+    > meals
+    Roger breakfast lunch
+    John lunch dinner
+    Peter dinner
+
+    Total: 3 breakfast: 3 lunch: 2 dinner: 2
+There should only be 1 breakfast, not 3!
+
+Please can you help the programmer find the bug – and suggest some possible improvements to the program!
