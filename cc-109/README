@@ -1,0 +1,17 @@
+I’m trying to write a very simple dice game where the computer simulates two players each throwing dice.
+The higher score wins and after a (selectable) number of turns the player who’s won most times wins the game.
+(I’m going to make the game cleverer once it’s working.)
+But the games always seem to be drawn and I can’t see why.
+Here is what the program produces:
+
+    dice_game
+    Let's play dice
+    How many turns? 10
+    Drawn!
+    How many turns? 8
+    Drawn!
+    How many turns? ^D
+
+What’s going wrong, and how might you help the programmer find the problem?
+As usual, there may be other suggestions you might make of some other possible things
+to (re-)consider about their program.
