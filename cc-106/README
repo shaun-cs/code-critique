@@ -1,0 +1,18 @@
+I am learning some C++ by writing a simple date class.
+The code compiles without warnings, but I have made some mistakes
+somewhere as the test program does not always produce what I expect.
+
+> testdate
+Enter start date (YYYY-MM-DD) : 2017-06-01
+Enter adjustment (YYYY-MM-DD) : 0000-01-30
+Adjusted date: 2017-07-31
+> testdate
+Enter start date (YYYY-MM-DD) : 2017-02-01
+Enter adjustment (YYYY-MM-DD) : 0001-01-09
+Adjusted date: 2018-03-10
+> testdate
+Enter start date (YYYY-MM-DD) : 2017-03-04
+Enter adjustment (YYYY-MM-DD) : 0001-00-30
+Adjusted date: 2017-04-03
+
+The last date ought to be 2018-04-04, but I cannot see what I am doing wrong.
